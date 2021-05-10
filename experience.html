@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./nav.css" />
+		<link rel="stylesheet" href="./index.css" />
+		<link
+			crossorigin="anonymous"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			rel="stylesheet"
+		/>
+		<title>Portfolio</title>
+	</head>
+
+	<body>
+		<header class="page-header">
+			<div class="page-header__top">
+				<div class="page-header__logo">PORTFOLIO</div>
+				<div class="page-header__toggle" onclick="toggleMenu()">☰</div>
+			</div>
+			<nav class="page-header__bottom">
+				<ul id="navigation" class="navigation">
+					<li class="navigation__item">
+						<a href="index.html">Home</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container experience" style="display: block">
+			<div class="right_side" style="width: 100%">
+				<div class="player">
+					<div class="toggle"></div>
+					<!--            <audio src="./assets/mixkit-mouse-click-close-1113.wav" class="audio"></audio>-->
+				</div>
+				<div class="about">
+					<h2 class="title2">Experience</h2>
+					<div class="box">
+						<div class="year_company">
+							<h5>Jan 2021-Present</h5>
+							<h5>
+								Indian Space <br />Research<br />
+								Organization
+							</h5>
+						</div>
+						<div class="text">
+							<h4>Research Intern</h4>
+							<p>Research Intern at ISRO.</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="year_company">
+							<h5>Jan 2021-May 2021</h5>
+							<h5>PES University, Bengaluru.</h5>
+						</div>
+						<div class="text">
+							<h4>Teaching Assistant</h4>
+							<p>
+								I was the Teaching Assistant for the course EC253: Principles of
+								Digital Signal Processing, for a batch of over 300. The course
+								was anchored by Dr. B. Niranjana Krupa.
+							</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="year_company">
+							<h5>June 2019-July 2019</h5>
+							<h5>
+								Center for Data Sciences and Applied Machine Learning: PES
+								University, Bengaluru.
+							</h5>
+						</div>
+						<div class="text">
+							<h4>Research Intern</h4>
+							<p>
+								I have worked on “Generating stylized captions for images using
+								deep learning” under the guidance of Ms. P. Ramadevi. Features
+								had been extracted using a pre-trained convolutional neural
+								network. My work included changing the layers of the recurrent
+								neural network using Long Short Term Memory(LSTM) and Gated
+								Recurrent Units(GRU) to generate the captions. The insights
+								gained during the internship are unparalleled and have played a
+								pivotal role in my career.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="credits">
+					<p>coded by Afif</p>
+					<div>
+						<i class="fab fa-github"></i>
+						<i class="fab fa-linkedin-in"></i>
+					</div>
+
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const body = document.querySelector('body');
+			// const audio = document.querySelector('.audio');
+			const audio = new Audio('./assets/mixkit-mouse-click-close-1113.wav');
+			const toggle = document.querySelector('.toggle');
+			const right_side = document.querySelector('.right_side');
+
+			const change = async () => {
+				if (audio.paused) {
+					await audio.play();
+				} else {
+					audio.currentTime = 0;
+				}
+				await audio.play();
+				body.classList.toggle('dark');
+				right_side.classList.toggle('dark');
+			};
+
+			toggle.addEventListener('click', change);
+		</script>
+	</body>
+</html>

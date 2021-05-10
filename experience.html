@@ -94,10 +94,13 @@
 				<div class="credits">
 					<p>coded by Afif</p>
 					<div>
-						<i class="fab fa-github"></i>
-						<i class="fab fa-linkedin-in"></i>
+						<a href="https://github.com/afif1400">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://www.linkedin.com/in/afif-ahmed/">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
 					</div>
-
 					<span></span>
 				</div>
 			</div>
@@ -122,6 +125,11 @@
 			};
 
 			toggle.addEventListener('click', change);
+
+			let nav = document.getElementById('navigation');
+			function toggleMenu() {
+				nav.classList.toggle('navigation--visible');
+			}
 		</script>
 	</body>
 </html>

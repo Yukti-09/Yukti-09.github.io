@@ -244,6 +244,10 @@ body.dark .wrapper .button {
 	color: #2b2d42;
 }
 
+.wrapper .button a {
+	text-decoration: none;
+}
+
 .wrapper .button:nth-child(1):hover .icon {
 	background: #222;
 }
@@ -396,6 +400,11 @@ body.dark .skills .box h4 {
 
 .credits p {
 	text-transform: uppercase;
+}
+
+.credits div a {
+	text-decoration: none;
+	color: #2b2d42;
 }
 
 .credits i {
